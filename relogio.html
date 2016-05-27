@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<!--html ng-app="relogio"-->
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="public/vendor/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="public/vendor/bootstrap/dist/css/bootstrap-theme.css">
+  <script src="public/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="public/vendor/moment/moment.js"></script>
+  <script type="text/javascript" src="public/js/relogio.js"></script>
+
+  <style >
+    .visor{
+      font-size: 150px;
+      text-align: center;
+    }
+    #marcadorTotal{
+      font-size: 100px;
+    }
+    label{
+      font-size: 40px;
+      vertical-align: middle;
+      text-align: right;
+    }
+  </style>
+
+</head>
+<body>
+
+  <h1 class="text-center"> Relógio
+    <button id="fontPlus"> + </button>
+    <button id="fontMinus"> - </button>
+    <button id="button2"> iniciar </button>
+  </h1>
+
+
+  <div class="container">
+  <div class="table-responsive">
+
+    <div id="maior" class="form-group">
+      <label for="marcador1Txt" class="control-label col-sm-2" > Tempo Restante </label>
+      <div class="col-sm-10">
+      <div id="marcadorRegressivo" class="visor" > 00:00
+      </div>
+      </div>
+      <input type="text" placeholder="00:00" id="marcador1Txt"/>
+      <button id="button1"> Regressivo </button>
+    </div>
+
+  <div id="slides" class="form-group">
+      <label for="contaSlides" class="control-label col-sm-2" > Slides Restantes </label>
+
+      <div class="col-sm-10">
+        <div id="contaSlidesDiv" class="visor" > 0
+        </div>
+        <!--input type="text" id="contaSlides" /-->
+
+      </div>
+      <button id="buttonPlus"> + </button>
+      <button id="buttonMinus"> - </button>
+  </div>
+
+    <div id="geral" class="form-group">
+      <label for="contaSlides" class="control-label col-sm-2" > Tempo Total </label>
+      <div class="col-sm-10">
+        <div id="marcadorTotal" class="visor"> 00:00:00
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+</body>
+</html>
